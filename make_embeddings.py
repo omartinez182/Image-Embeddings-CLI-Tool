@@ -7,6 +7,7 @@ from PIL import Image
 from torchvision import transforms
 from img2vec_pytorch import Img2Vec
 from tqdm import tqdm
+import requests
 import traceback
 import logging
 
@@ -14,9 +15,24 @@ def main(args):
     """
     Generate 512 embeddings for a given image(s).
     """
+
+    if args.URL is not None:
+        # Create directory for downloaded images
+        inputDir = "data/downloaded_images"
+        os.makedirs(inputDir, exist_ok=True)
+        image_name = args.URL.rsplit('/', 1)[-1]
+        path_and_name = os.path.join(inputDir, image_name)
+        # Download the image
+        response = requests.get(args.URL)
+        # Save the image
+        file = open(path_and_name, "wb")
+        file.write(response.content)
+        file.close()
+    else:
+        inputDir = args.inputDir
+
     # Load images
     inputDim = (224,224)
-    inputDir = args.inputDir
     inputDirCNN = "data/output/inputImagesCNN"
 
     os.makedirs(inputDirCNN, exist_ok=True)
@@ -60,6 +76,8 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument('--URL',
+                    type=str)
     parser.add_argument('--inputDir',
                         type=str,
                         default='data/images')
