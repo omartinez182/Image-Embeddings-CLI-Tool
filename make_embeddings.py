@@ -19,7 +19,7 @@ def main(args):
     inputDir = args.inputDir
     inputDirCNN = "data/output/inputImagesCNN"
 
-    os.makedirs(inputDirCNN, exist_ok = True)
+    os.makedirs(inputDirCNN, exist_ok=True)
 
     transformationForCNNInput = transforms.Compose([transforms.Resize(inputDim)])
 
@@ -42,6 +42,7 @@ def main(args):
 
     allVectors = {}
     print("Converting images to feature vectors:")
+    
     for image in tqdm(os.listdir("data/output/inputImagesCNN")):
         try:
             I = Image.open(os.path.join("data/output/inputImagesCNN", image))
@@ -52,7 +53,7 @@ def main(args):
             pass
 
     # Save embedding vectors
-    with open('models/allEmbeddings.pkl', 'wb') as handle:
+    with open('embeddings/allEmbeddings.pkl', 'wb') as handle:
         pickle.dump(allVectors, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
     print(allVectors)
