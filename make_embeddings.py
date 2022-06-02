@@ -72,7 +72,7 @@ def main(args):
     with open('embeddings/allEmbeddings.pkl', 'wb') as handle:
         pickle.dump(allVectors, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-    print(allVectors)
+    return allVectors
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
