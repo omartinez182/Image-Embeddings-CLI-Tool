@@ -8,7 +8,6 @@ test:
 format:
 	black *.py
 
-
 lint:
 	pylint --disable=R,C,broad-except,bare-except make_embeddings.py
 
