@@ -1,6 +1,4 @@
 import os
-import pandas as pd
-import numpy as np
 import pickle
 import argparse
 from PIL import Image
@@ -49,7 +47,6 @@ def main(args):
             newI.close()
             I.close()
         except Exception as e:
-            pass
             print(e)
             logging.error(traceback.format_exc())
 
@@ -81,5 +78,5 @@ if __name__ == "__main__":
     parser.add_argument('--inputDir',
                         type=str,
                         default='data/images')
-    args = parser.parse_args()
-    main(args)
+    arguments = parser.parse_args()
+    main(arguments)

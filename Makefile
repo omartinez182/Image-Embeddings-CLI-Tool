@@ -10,6 +10,6 @@ format:
 
 
 lint:
-	pylint --disable=R,C make_embeddings.py
+	pylint --disable=R,C,broad-except,bare-except make_embeddings.py
 
 all: install lint test
