@@ -5,3 +5,6 @@ img2dataset==1.28.0
 img2vec_pytorch==1.0.1
 torchvision
 tqdm==4.63.0
+pylint
+pytest
+black
