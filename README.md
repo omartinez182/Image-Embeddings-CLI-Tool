@@ -21,7 +21,7 @@ virtualenv venv
 source venv/bin/activate
 ```
 
-3-A) Then run: (recommended)
+3) Then run: **(recommended)**
 
 ```
 make all
