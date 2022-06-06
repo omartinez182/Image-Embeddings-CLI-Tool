@@ -3,7 +3,6 @@ pandas==1.3.5
 Pillow==9.0.0
 img2dataset==1.28.0
 img2vec_pytorch==1.0.1
-torch==1.2.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 torchvision==0.4.0+cpu
 tqdm==4.63.0
 pylint
