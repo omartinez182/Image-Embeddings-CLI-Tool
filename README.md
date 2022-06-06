@@ -21,13 +21,13 @@ virtualenv venv
 source venv/bin/activate
 ```
 
-3) Then run: (recommended)
+3-A) Then run: (recommended)
 
 ```
 make all
 ```
 
-or manually install of the requirements.
+- or install the requirements using pip.
 
 ```
 pip install -r requirements.txt
