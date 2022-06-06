@@ -49,7 +49,7 @@ python3 make_embeddings.py --URL 'https://media.wired.com/photos/5c18253a9fe42d6
 
 Make sure that you only have the desired images in the folder ```data/output/inputImagesCNN```. 
 
-**Output:** The embeddings will be saved in the folder with the same name (```embeddings```) as a pickle file which you can then load and use as features for your modeling task of choice.
+**Output:** The embeddings will be saved in the folder with the same name (```embeddings```) as a pickle file that you can then load and use as features for your modeling task of choice.
 
 ```NOTE: Currently the library to create the embeddings using PyTorch supports only jpg images.```
 
