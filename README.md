@@ -7,7 +7,6 @@ This CLI tool generates image embeddings from either URLs or a local folder. The
 
 ## Getting Started
 
-
 1) Create a virtual environment.
 
 ```
@@ -32,6 +31,7 @@ make all
 ```
 pip install -r requirements.txt
 ```
+
 
 ## Usage
 
