@@ -4,6 +4,7 @@ Pillow==9.0.0
 img2dataset==1.28.0
 img2vec_pytorch==1.0.1
 --find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.11.0+cpu
 torchvision==0.12.0+cpu
 tqdm==4.63.0
 pylint
