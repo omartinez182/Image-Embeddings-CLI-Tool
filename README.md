@@ -33,7 +33,7 @@ make all
 pip install -r requirements.txt
 ```
 
-### Usage
+## Usage
 
 If you'd like to create embeddings for images in a specific folder, you just need to specify the path as an argument. For example:
 
